@@ -1,0 +1,28 @@
+{
+  "plugins": ["jasmine"],
+  "parser": "babel-eslint",
+  "extends": [
+    "react-app",
+    "standard",
+    "prettier",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "rules": {
+    "indent": ["off", 2],
+    "comma-dangle": ["error", "always-multiline"],
+    "dot-notation": ["off"],
+    "lines-between-class-members": ["off"]
+  },
+  "env": {
+    "jasmine": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.3"
+    }
+  },
+  "globals": {
+    "__DEV__": "readonly"
+  }
+}

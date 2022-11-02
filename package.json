@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "electron-invoice-app",
+  "version": "0.0.0",
+  "main": "electron/main.js",
+  "build": {
+    "productName": "Invoice App",
+    "appId": "com.AxelOliver.invoice-app",
+    "electronVersion": "21.2.1",
+    "files": [
+      "build/**/*",
+      "electron/*"
+    ]
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "preact build",
+    "serve": "preact serve",
+    "dev": "nf start",
+    "pdev": "preact watch",
+    "lint": "eslint src",
+    "postinstall": "echo 'ALERT! This package has been deprecated. Please use default/typescript/netlify/simple.'",
+    "electron": "electron .",
+    "ebuild": "npm run build && node_modules/.bin/build"
+  },
+  "eslintIgnore": [
+    "build/*"
+  ],
+  "devDependencies": {
+    "electron": "^21.2.1",
+    "electron-builder": "^23.6.0",
+    "eslint": "^4.5.0",
+    "eslint-config-synacor": "^1.1.0",
+    "foreman": "^3.0.1",
+    "preact-cli": "^2.0.0"
+  },
+  "dependencies": {
+    "preact": "^8.5.2",
+    "preact-compat": "^3.17.0",
+    "preact-material-components": "^1.4.3",
+    "preact-render-to-string": "^4.1.0",
+    "preact-router": "^2.5.5"
+  }
+}
